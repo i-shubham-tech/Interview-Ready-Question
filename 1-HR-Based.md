@@ -20,7 +20,7 @@
 ## 1️⃣ Tell me about yourself.
 
 I would say:  
-"Hi, my name is ______. I completed/am doing my B.Tech/Diploma in ______.  
+Gooding Morning Mam, my name is ______. I’m in my final year of B.Tech in ______ from ______. 
 I’m a MERN stack developer and I’ve been learning React, Node, Express, and MongoDB by building real projects.
 
 I enjoy creating clean UI and working on full-stack logic.  
@@ -53,7 +53,7 @@ I’m improving in time management."
 
 I would say:  
 "I want to join because your company works with the technology stack I’m really interested in, especially MERN.  
-I also saw that your team focuses on learning and growth, which is important for a fresher like me.  
+I also saw that your team focuses on learning and growth, which is more important for a fresher like me.  
 I want to contribute and grow with the team."
 
 ---
@@ -71,10 +71,10 @@ I learn fast, I’m consistent, and I’m ready to give my best from day one."
 
 I would say:  
 "My main project is ______ (SalesBuddy or your project).  
-It’s a full-stack web app built using React, Node.js, Express, and MongoDB.
+It’s a full-stack web application built using React, Node.js, Express, and SQL.
 
 On the frontend, I created the UI, handled forms, routing, and state management.  
-On the backend, I created APIs, handled authentication using JWT, and managed the database using MongoDB.
+On the backend, I created APIs, handled authentication using JWT, and managed the database using SQL.
 
 I learned a lot about API design, error handling, and working with real-world flows like login, cart, checkout, and admin panel.  
 This project helped me understand how the full stack connects end-to-end."
@@ -84,8 +84,8 @@ This project helped me understand how the full stack connects end-to-end."
 ## 7️⃣ What challenges did you face in your project?
 
 I would say:  
-"One of the challenges was handling authentication and protecting routes.  
-At first I got confused with tokens, but after understanding JWT flow clearly, I fixed it.
+"One of the At first I got confused with tokens, but after understanding JWT flow clearly, I fixed it.
+challenges was handling authentication and protecting routes.  
 
 Another challenge was managing state properly in React, especially when multiple components were updating the same data.  
 I solved it by lifting state up and using proper hooks."
