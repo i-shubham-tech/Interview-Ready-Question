@@ -22,8 +22,7 @@
 I would say:  
 Gooding Morning Mam, my name is ______. I’m in my final year of B.Tech in ______ from ______. 
 I’m a MERN stack developer and I’ve been learning React, Node, Express, and MongoDB by building real projects.
-
-I enjoy creating clean UI and working on full-stack logic.  
+ 
 My main project is ______ (SalesBuddy or your project name), where I worked on authentication, APIs, and frontend UI.
 
 I’m a quick learner, I stay consistent, and I genuinely love solving problems.  
