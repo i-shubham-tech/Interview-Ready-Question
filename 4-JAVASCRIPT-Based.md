@@ -1,1 +1,171 @@
+<h1 align="center">JAVASCRIPT SCRIPT</h1>
 
+# Table of Contents
+
+1. [What is JavaScript and where does it run?](#1-what-is-javascript-and-where-does-it-run)
+2. [Explain var, let, and const](#2-explain-var-let-and-const)
+3. [What is hoisting in JavaScript?](#3-what-is-hoisting-in-javascript)
+4. [What are data types in JavaScript?](#4-what-are-data-types-in-javascript)
+5. [Explain == vs ===](#5-explain-vs)
+6. [What is type coercion?](#6-what-is-type-coercion)
+7. [What are functions? Explain function types](#7-what-are-functions-explain-function-types)
+8. [Difference between arrow function and normal function](#8-difference-between-arrow-function-and-normal-function)
+9. [What is this keyword?](#9-what-is-this-keyword)
+10. [Explain call, apply, and bind](#10-explain-call-apply-and-bind)
+11. [What are closures?](#11-what-are-closures)
+12. [What is scope and scope chain?](#12-what-is-scope-and-scope-chain)
+13. [Explain synchronous vs asynchronous JavaScript](#13-explain-synchronous-vs-asynchronous-javascript)
+14. [What is the Event Loop?](#14-what-is-the-event-loop)
+15. [Explain setTimeout, setImmediate, Promise.then](#15-explain-settimeout-setimmediate-promise-then)
+16. [What are promises?](#16-what-are-promises)
+17. [Explain async/await](#17-explain-async-await)
+18. [How does error handling work in JavaScript?](#18-how-does-error-handling-work-in-javascript)
+19. [What are objects in JavaScript?](#19-what-are-objects-in-javascript)
+20. [What is destructuring?](#20-what-is-destructuring)
+21. [Explain spread (...) and rest operator](#21-explain-spread-and-rest-operator)
+22. [What are arrays and common array methods?](#22-what-are-arrays-and-common-array-methods)
+23. [What is shallow copy vs deep copy?](#23-what-is-shallow-copy-vs-deep-copy)
+24. [Explain prototypes and prototypal inheritance](#24-explain-prototypes-and-prototypal-inheritance)
+25. [What is ES6+ and why is it important?](#25-what-is-es6-and-why-is-it-important)
+
+
+## 1. What is JavaScript and where does it run?
+
+JavaScript is a high-level, interpreted, and dynamic programming language that is primarily used to create interactive web pages.
+
+It can run:
+- In the browser (using JavaScript engines like V8, SpiderMonkey)
+- On the server side using the Node.js runtime environment
+
+---
+
+## 2. Explain var, let, and const
+
+### var
+- Function-scoped
+- Can be redeclared and reassigned
+- Hoisted and initialized with undefined
+- Initialization is optional
+
+### let
+- Block-scoped
+- Can be reassigned but cannot be redeclared
+- Hoisted but exists in the Temporal Dead Zone (TDZ)
+- Initialization is optional
+
+### const
+- Block-scoped
+- Cannot be reassigned and cannot be redeclared
+- Hoisted but exists in the TDZ
+- Initialization is mandatory
+
+---
+
+## 3. What is hoisting in JavaScript?
+
+Hoisting is a JavaScript mechanism where variable and function declarations are moved to the top of their scope during the compilation phase before code execution.
+
+- `var` is hoisted and initialized with `undefined`
+- `let` is hoisted but remains in the Temporal Dead Zone
+- `const` is also hoisted but remains in the TDZ
+- Function declarations are fully hoisted (both name and body)
+- In function expressions, only the variable is hoisted, not the function body
+
+---
+
+## 4. What are data types in JavaScript?
+
+Data types define what kind of value a variable can hold.
+
+JavaScript has two types of data types:
+
+### Primitive Data Types
+- Immutable
+- Stored by value
+- String, Number, Boolean, null, undefined
+
+### Non-Primitive (Reference) Data Types
+- Mutable
+- Stored by reference
+- Object, Array, Function
+
+---
+
+## 5. Explain `==` vs `===`
+
+### `==` (Loose Equality)
+- Compares only values, not types
+- Performs implicit type conversion
+- Can cause unexpected results  
+  *Example:* `"" == 0` → `true`
+
+### `===` (Strict Equality)
+- Compares both value and type
+- No implicit type conversion
+- Prevents unexpected errors
+
+---
+
+## 6. What is type coercion?
+
+Type coercion is the process of converting one data type into another, either automatically or manually.
+
+### Types:
+- **Implicit Type Coercion:** JavaScript automatically converts the type  
+  *Example:* `'2' * 5` → `10`
+- **Explicit Type Coercion:** Developer manually converts the type  
+  *Using:* `String()`, `Number()`, `Boolean()`, `parseInt()`, `parseFloat()`
+---
+
+## 7. What are functions? Explain function types
+
+A function is a reusable block of code that performs a specific task. Functions help in code reusability, readability, and modularity.
+
+### Function Types in JavaScript
+
+#### 1️⃣ Function Declaration
+- A function defined using the `function` keyword with a name.
+
+#### 2️⃣ Function Expression
+- A function assigned to a variable.
+
+#### 3️⃣ Arrow Function
+- A shorter syntax for writing functions using `=>`.
+
+
+#### 4️⃣ Anonymous Function
+- A function without a name, usually used as a callback.
+---  
+
+## 8. Difference between Arrow Function and Normal Function
+
+Arrow functions and normal functions differ in how they handle `this`, `arguments`, constructors, and syntax.
+
+| Feature               | Normal Function                         | Arrow Function                                    |
+|------------------------|----------------------------------------|--------------------------------------------------|
+| `this` keyword        | Has its own `this` (depends on how it is called) | Does not have its own `this`; inherits from parent scope |
+| Arguments object      | Has its own arguments object          | Does not have `arguments`                       |
+| Constructor usage     | Can be used as a constructor with `new` | Cannot be used as a constructor               |
+| Hoisting              | Function declarations are hoisted     | Not hoisted                                    |
+| Syntax                | Longer syntax                         | Shorter and cleaner syntax                    |
+
+---
+
+## 9️⃣ What is the `this` keyword?
+
+The `this` keyword refers to the object that is currently calling the function. Its value depends on how and where the function is called, not where it is written.
+such as global scope, function call, object method, or arrow function.
+
+---
+
+## 10. Explain call, apply, and bind
+
+`call`, `apply`, and `bind` are methods used to manually set the value of `this` for a function.
+
+- **call()**: Invokes the function immediately with a specified `this` value and arguments.
+- **apply()**: Same as `call()`, but arguments are passed as an array.
+- **bind()**: Returns a new function with permanently bound `this` ,,without invoking it immediately.
+
+**Usage:**  
+- `bind` is often used in event handlers and callbacks.
+- `call` and `apply` are useful for function borrowing(`where one object canuse a method of another object`) or immediately invoking functions with a specific context.
