@@ -169,3 +169,95 @@ such as global scope, function call, object method, or arrow function.
 **Usage:**  
 - `bind` is often used in event handlers and callbacks.
 - `call` and `apply` are useful for function borrowing(`where one object canuse a method of another object`) or immediately invoking functions with a specific context.
+---
+
+## 1️⃣1️⃣ What are closures?
+
+A closure is created when a function remembers and can access variables from its outer (lexical) scope even after the outer function has finished executing.
+
+**Uses**:  
+- Data hiding  
+- Encapsulation
+
+---
+
+## 1️⃣2️⃣ What is scope and scope chain?
+
+### Scope
+Determines where a variable can be accessed in a program. It defines the visibility and lifetime of variables.
+
+### Types of Scope
+
+- **Global Scope**  
+  Variables declared outside any function or block.  
+  Accessible from anywhere in the program.
+
+- **Local (Function) Scope**  
+  Variables declared inside a function.  
+  Accessible only within that function.
+
+- **Block Scope**  
+  Variables declared with `let` and `const` inside `{ }`.  
+  Accessible only inside that block.
+
+---
+
+### Lexical Environment
+A structure that stores variable bindings.  
+Created when code is written, not executed.  
+Each environment has a reference to its outer (parent) environment.
+
+---
+
+### What is Scope Chain?
+Scope Chain is a process by which JavaScript look up for a variables:
+
+- Search in the current scope
+- If not found, move to the outer scope
+- Continue until the global scope
+- If not found, throw a `ReferenceError`
+
+---
+
+## 1️⃣3️⃣ Explain synchronous vs asynchronous JavaScript
+
+- **Synchronous JavaScript**  
+  Executes code line by line and blocks subsequent code until a task completes.
+
+- **Asynchronous JavaScript**  
+  Allows long-running operations to execute without blocking the main thread.  
+  While these tasks run in the background, JavaScript continues executing other code. Once the operation completes, the result is handled using callbacks,
+  promises, or async/await.
+
+---
+
+## 1️⃣4️⃣ What is the Event Loop?
+
+The Event Loop enables JavaScript to perform non-blocking asynchronous operations, despite being single-threaded.
+
+**How it works**:
+- Executes synchronous code in the call stack.
+- Asynchronous tasks are handled by Web APIs or Node APIs, with callbacks placed in the task queues.
+- When the call stack is empty:
+  - The event loop moves tasks from the microtask queue (promises, `queueMicrotask`) to the call stack.
+  - Then processes tasks from the macrotask queue (`setTimeout`, `setInterval`, events).
+
+---
+
+## 1️⃣5️⃣ Explain `setTimeout`, `setImmediate`, `Promise.then`
+
+- **`setTimeout`**  
+  Executes code after a minimum delay.  
+  Callback goes to the **macrotask queue**.  
+  Delay is not guaranteed; depends on the event loop.
+
+- **`setImmediate`** (Node.js only)  
+  Executes code after the current event loop phase.  
+  Callback goes to the **macrotask queue**.  
+  Usually runs before `setTimeout(0)` in Node.js.
+
+- **`Promise.then`**  
+  Executes after the promise is resolved.  
+  Callback goes to the **microtask queue**.  
+  Always executes before macrotasks.
+---
