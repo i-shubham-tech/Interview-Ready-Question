@@ -261,3 +261,71 @@ The Event Loop enables JavaScript to perform non-blocking asynchronous operation
   Callback goes to the **microtask queue**.  
   Always executes before macrotasks.
 ---
+
+## 1️⃣6️⃣ What are promises?
+
+A Promise is an object that represents the eventual completion or failure of an asynchronous operation. It helps to write async code in a more readable and manageable way compared to callbacks.
+
+### 🔹 Promise States
+
+A promise can be in one of three states:
+
+- **Pending**
+  - Initial state
+  - Operation is still in progress
+
+- **Fulfilled**
+  - Operation completed successfully
+  - Returns a value
+
+- **Rejected**
+  - Operation failed
+  - Returns an error
+
+### 🔹 Methods
+
+- **.then()**
+  - Used to handle the fulfilled state
+
+- **.catch()**
+  - Used to handle the rejected state
+
+- **.finally()**
+  - Executes regardless of success or failure
+
+---
+
+## 1️⃣7️⃣ Explain async/await
+
+`async/await` is a modern syntax built on top of promises that allows writing asynchronous code in a cleaner, more readable, and synchronous-like manner.
+
+### 🔹 async
+- Makes a function return a promise
+
+### 🔹 await
+- Pauses execution until the promise resolves or rejects
+
+---
+
+## 1️⃣8️⃣ How does error handling work in JavaScript?
+
+Error handling in JavaScript is the mechanism used to detect and manage runtime and asynchronous errors using `try...catch`, promise rejection handling, and custom errors, ensuring applications do not crash and can fail gracefully.
+
+---
+
+## 1️⃣9️⃣ What are objects in JavaScript?
+
+An object is a collection of key–value pairs used to store related data and behavior together. They help represent real-world entities and organize data efficiently.
+
+- Can be created using object literal or `new Object()`
+- Properties can be accessed using dot or bracket notation
+- Objects are mutable
+- Stored and passed by reference, not by value
+
+---
+
+## 2️⃣0️⃣ What is destructuring?
+
+Destructuring is a JavaScript feature that allows extracting values from arrays or objects and assigning them to variables in a shorter and cleaner way.
+
+---
