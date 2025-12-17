@@ -340,7 +340,6 @@ The spread operator (`...`) is used to expand elements of an array or object int
 - Copy arrays or objects  
 - Combine arrays or objects  
 
----
 
 ### 🔹 Rest Operator (...)
 
