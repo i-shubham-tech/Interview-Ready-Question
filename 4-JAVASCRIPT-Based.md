@@ -6,27 +6,28 @@
 2. [Explain var, let, and const](#2-explain-var-let-and-const)
 3. [What is hoisting in JavaScript?](#3-what-is-hoisting-in-javascript)
 4. [What are data types in JavaScript?](#4-what-are-data-types-in-javascript)
-5. [Explain == vs ===](#5-explain-vs)
+5. [Explain == vs ===](#5-explain--vs-)
 6. [What is type coercion?](#6-what-is-type-coercion)
 7. [What are functions? Explain function types](#7-what-are-functions-explain-function-types)
 8. [Difference between arrow function and normal function](#8-difference-between-arrow-function-and-normal-function)
-9. [What is this keyword?](#9-what-is-this-keyword)
+9. [What is this keyword?](#9%EF%B8%8F⃣-what-is-the-this-keyword)
 10. [Explain call, apply, and bind](#10-explain-call-apply-and-bind)
-11. [What are closures?](#11-what-are-closures)
-12. [What is scope and scope chain?](#12-what-is-scope-and-scope-chain)
-13. [Explain synchronous vs asynchronous JavaScript](#13-explain-synchronous-vs-asynchronous-javascript)
-14. [What is the Event Loop?](#14-what-is-the-event-loop)
-15. [Explain setTimeout, setImmediate, Promise.then](#15-explain-settimeout-setimmediate-promise-then)
-16. [What are promises?](#16-what-are-promises)
-17. [Explain async/await](#17-explain-async-await)
-18. [How does error handling work in JavaScript?](#18-how-does-error-handling-work-in-javascript)
-19. [What are objects in JavaScript?](#19-what-are-objects-in-javascript)
-20. [What is destructuring?](#20-what-is-destructuring)
-21. [Explain spread (...) and rest operator](#21-explain-spread-and-rest-operator)
-22. [What are arrays and common array methods?](#22-what-are-arrays-and-common-array-methods)
-23. [What is shallow copy vs deep copy?](#23-what-is-shallow-copy-vs-deep-copy)
-24. [Explain prototypes and prototypal inheritance](#24-explain-prototypes-and-prototypal-inheritance)
-25. [What is ES6+ and why is it important?](#25-what-is-es6-and-why-is-it-important)
+11. [What are closures?](#1%EF%B8%8F⃣1%EF%B8%8F⃣-what-are-closures)
+12. [What is scope and scope chain?](#1%EF%B8%8F⃣2%EF%B8%8F⃣-what-is-scope-and-scope-chain)
+13. [Explain synchronous vs asynchronous JavaScript](#1%EF%B8%8F⃣3%EF%B8%8F⃣-explain-synchronous-vs-asynchronous-javascript)
+14. [What is the Event Loop?](#1%EF%B8%8F⃣4%EF%B8%8F⃣-what-is-the-event-loop)
+15. [Explain setTimeout, setImmediate, Promise.then](#1%EF%B8%8F⃣5%EF%B8%8F⃣-explain-settimeout-setimmediate-promisethen)
+16. [What are promises?](#1%EF%B8%8F⃣6%EF%B8%8F⃣-what-are-promises)
+17. [Explain async/await](#1%EF%B8%8F⃣7%EF%B8%8F⃣-explain-asyncawait)
+18. [How does error handling work in JavaScript?](#1%EF%B8%8F⃣8%EF%B8%8F⃣-how-does-error-handling-work-in-javascript)
+19. [What are objects in JavaScript?](#1%EF%B8%8F⃣9%EF%B8%8F⃣-what-are-objects-in-javascript)
+20. [What is destructuring?](#2%EF%B8%8F⃣0%EF%B8%8F⃣-what-is-destructuring)
+21. [Explain spread (...) and rest operator](#2%EF%B8%8F⃣1%EF%B8%8F⃣-explain-spread--and-rest-operator)
+22. [What are arrays and common array methods?](#2%EF%B8%8F⃣2%EF%B8%8F⃣-what-are-arrays-and-common-array-methods)
+23. [What is shallow copy vs deep copy?](#2%EF%B8%8F⃣3%EF%B8%8F⃣-what-is-shallow-copy-vs-deep-copy)
+24. [Explain prototypes and prototypal inheritance](#2%EF%B8%8F⃣4%EF%B8%8F⃣-explain-prototypes-and-prototypal-inheritance)
+25. [What is ES6+ and why is it important?](#2%EF%B8%8F⃣5%EF%B8%8F⃣-what-is-es6-and-why-is-it-important)
+26. [Debouncing-Throttle](#2%EF%B8%8F⃣6%EF%B8%8F⃣-debouncing--throttling)
 
 
 ## 1. What is JavaScript and where does it run?
@@ -329,3 +330,124 @@ An object is a collection of key–value pairs used to store related data and be
 Destructuring is a JavaScript feature that allows extracting values from arrays or objects and assigning them to variables in a shorter and cleaner way.
 
 ---
+
+## 2️⃣1️⃣ Explain Spread (...) and Rest Operator
+
+### 🔹 Spread Operator (...)
+
+The spread operator (`...`) is used to expand elements of an array or object into individual values.  
+**Common Uses:**  
+- Copy arrays or objects  
+- Combine arrays or objects  
+
+---
+
+### 🔹 Rest Operator (...)
+
+The rest operator (`...`) collects multiple values into a single array or object.  
+**Common Uses:**  
+- Function parameters to handle variable number of arguments
+---
+
+## 2️⃣2️⃣ What are arrays and common array methods?
+
+### Arrays
+An array is an ordered collection of values stored in a single variable.  
+- Values can be of the same or different data types  
+- Accessed via index (starting at 0)
+
+### Common Array Methods (Very Important for Interviews)
+
+1. **push() / pop()**  
+   - `push()`: Adds element at the end  
+   - `pop()`: Removes element from the end
+
+2. **unshift() / shift()**  
+   - `unshift()`: Adds element at the start  
+   - `shift()`: Removes element from the start
+
+3. **map()**  
+   - Creates a new array by transforming each element
+
+4. **filter()**  
+   - Creates a new array with elements that match a condition
+
+5. **reduce()**  
+   - Reduces array to a single value (e.g., sum, product)
+
+6. **forEach()**  
+   - Iterates over array elements (does not return a new array)
+
+---
+
+## 2️⃣3️⃣ What is shallow copy vs deep copy?
+
+### 🔹 Shallow Copy
+- Creates a new object/array, but nested objects are shared the same reference
+- Changes in nested objects affect the original
+
+```javascript
+const obj1 = { a: 1, nested: { b: 2 } };
+const obj2 = { ...obj1 }; // Shallow copy
+obj2.nested.b = 3;  
+console.log(obj1.nested.b); // 3 (affected)
+```
+
+### 🔹 Deep Copy
+- Creates a new object/array including all the nested object
+- Changes in nested objects do not affect the original
+
+```javascript
+const obj1 = { a: 1, nested: { b: 2 } };
+const obj2 = structuredClone(obj1); // Deep copy
+obj2.nested.b = 3;  
+console.log(obj1.nested.b); // 2 (unaffected)
+```
+
+---
+
+## 2️⃣4️⃣ Explain prototypes and prototypal inheritance
+
+### 🔹 What is a Prototype?
+- In JavaScript, each object has an internal property called `[[Prototype]]` (accessible via `__proto__`)
+- It points to another object from which it can inherit properties and methods
+
+### 🔹 Prototypal Inheritance
+- Allows one object to use properties and methods of another object
+- Enables object-based inheritance without classes
+
+```javascript
+const parent = { greet() { return "Hello"; } };
+const child = Object.create(parent);
+console.log(child.greet()); // "Hello"
+```
+
+---
+
+## 2️⃣5️⃣ What is ES6+ and why is it important?
+
+- ES6+ refers to ECMAScript 2015 and later versions
+- which introduced modern features to make JavaScript more powerful, readable, and maintainable.
+
+### 🔹 Key ES6+ Features:
+- **let / const:** Block-scoped variables  
+- **Arrow Functions:** Shorter function syntax  
+- **Modules (import/export):** Modular code organization  
+- **Promises:** Better asynchronous handling  
+- **Classes:** Cleaner syntax for inheritance and object creation
+---
+
+## 2️⃣6️⃣ Debouncing & Throttling
+
+### 🔹 Debouncing
+Ensures a function is executed only after a specified delay since the last event.  
+Useful for limiting the rate of function calls, e.g., search input
+
+
+### 🔹 Throttling
+Ensures a function runs at most once every specified interval, regardless of how often the event occurs.  
+Useful for scroll events, resize, etc.
+
+---
+
+<h1 align="center" red>LET ROCK....</h1>
