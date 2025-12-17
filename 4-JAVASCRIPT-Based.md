@@ -28,6 +28,7 @@
 24. [Explain prototypes and prototypal inheritance](#2%EF%B8%8F⃣4%EF%B8%8F⃣-explain-prototypes-and-prototypal-inheritance)
 25. [What is ES6+ and why is it important?](#2%EF%B8%8F⃣5%EF%B8%8F⃣-what-is-es6-and-why-is-it-important)
 26. [Debouncing-Throttle](#2%EF%B8%8F⃣6%EF%B8%8F⃣-debouncing--throttling)
+27. [What-is-TDZ](#2%EF%B8%8F⃣7%EF%B8%8F⃣-what-is-tdz)
 
 
 ## 1. What is JavaScript and where does it run?
@@ -448,5 +449,9 @@ Ensures a function runs at most once every specified interval, regardless of how
 Useful for scroll events, resize, etc.
 
 ---
+## 2️⃣7️⃣ What is TDZ
 
+- TDZ (Temporal Dead Zone) is the period between the start of a block and the declaration of a let or const variable, during which the variable cannot be accessed
+  
+---
 <h1 align="center" red>LET ROCK....</h1>
