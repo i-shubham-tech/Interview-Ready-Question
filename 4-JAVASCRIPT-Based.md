@@ -310,7 +310,7 @@ A promise can be in one of three states:
 
 ## 1️⃣8️⃣ How does error handling work in JavaScript?
 
-Error handling in JavaScript is the mechanism used to detect and manage runtime and asynchronous errors using `try...catch`, promise rejection handling, and custom errors, ensuring applications do not crash and can fail gracefully.
+Error handling used to detect and manage runtime and asynchronous errors using `try...catch`, promise rejection handling, and custom errors, ensuring applications do not crash and can fail gracefully.
 
 ---
 
