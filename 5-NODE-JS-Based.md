@@ -74,7 +74,7 @@
 - Once an operation completes, its callback is sent back to the event loop for processing.
 
 ## 9️⃣ What are Streams in Node.js and their types?
-- Streams handle large data in chunks instead of loading the entire data into memory.
+- Streams used handle large data in chunks instead of loading the entire data into memory at Once.
 - Used for reading or writing data continuously, such as files, videos, or network data.
 - **Types of Streams:**
   - **Readable Stream:** Reads data in chunks (`fs.createReadStream()`).
