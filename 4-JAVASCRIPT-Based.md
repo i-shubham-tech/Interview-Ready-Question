@@ -235,14 +235,13 @@ Scope Chain is a process by which JavaScript look up for a variables:
 
 ## 1️⃣4️⃣ What is the Event Loop?
 
-The Event Loop enables JavaScript to perform non-blocking asynchronous operations, despite being single-threaded.
+The Event Loop is a core mechanism used to perform non-blocking asynchronous operations, despite being single-threaded.
 
 **How it works**:
-- Executes synchronous code in the call stack.
-- Asynchronous tasks are handled by Web APIs or Node APIs, with callbacks placed in the task queues.
-- When the call stack is empty:
-  - The event loop moves tasks from the microtask queue (promises, `queueMicrotask`) to the call stack.
-  - Then processes tasks from the macrotask queue (`setTimeout`, `setInterval`, events).
+- It continously check whether call stack is empty or not
+- It empty it move callback from callback queue to the stack and execute them
+- It first process microtask like promise
+- then it process marcrotask like timer,I/O
 
 ---
 
