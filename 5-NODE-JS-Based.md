@@ -28,8 +28,8 @@
 ## 2️⃣ How does Node.js execute JavaScript code internally?
 - When we run a JavaScript file, Node.js V8 engine converts the JavaScript code into machine code and executes it.
 - Synchronous code is executed in the call stack.
-- Asynchronous code is sent to Node APIs (libuv thread pool).
-- When the async operation is completed, its callback is placed in the task queue.
+- Asynchronous code is handle by Node APIs (powered by libuv thread pool).
+- When the async operation is completed, its callback is push to the appropriate task queue.
 - The event loop continuously checks whether the call stack is empty.
 - If the call stack is empty, it picks callbacks from the queues and pushes them to the call stack for execution.
 - It first executes microtasks like promises, then executes macrotasks like timers and I/O callbacks.
@@ -39,13 +39,13 @@
 - When a request comes, synchronous code executes in the call stack.
 - Time-consuming operations like database calls and I/O are handled asynchronously by Node APIs powered by libuv thread pool.
 - While these run in the background, Node.js continues processing other requests.
-- Once the async operation finishes, its callback is placed in the appropriate queue, and the event loop pushes it to the call stack for execution when free.
+- Once the async operation finishes, its callback is placed in the appropriate queue, then  event loop pick the callback pushes it to the call stack for execution when free.
 - This allows Node.js to efficiently handle many concurrent requests with a single thread.
 
 ## 4️⃣ What is the Event Loop in Node.js?
-- The event loop is the core mechanism that enables Node.js to perform non-blocking asynchronous operations without blocking the main thread.
+- The event loop is the core mechanism that allow Node.js to perform non-blocking asynchronous operations without blocking the main thread.
 - It continuously checks whether the call stack is empty.
-- If empty, it picks callbacks from the queues and pushes them onto the call stack for execution.
+- If empty, it picks callbacks from the queues and pushes it to the call stack for execution.
 - It first executes microtasks like promises, then macrotasks like timers and I/O callbacks.
 
 ## 5️⃣ Explain Event Loop phases
@@ -55,10 +55,10 @@
   - **Poll:** Waits for new I/O events and executes their callbacks.
   - **Check:** Executes `setImmediate` callbacks.
   - **Close:** Executes cleanup callbacks like closing sockets.
-- Between phases, the event loop executes all microtasks, such as promise callbacks.
+- Between every phases, the event loop executes all microtasks, such as promise callbacks.
 
 ## 6️⃣ Difference between Call Stack, Callback Queue, and Microtask Queue
-- **Call Stack:** Executes synchronous code in LIFO order.
+- **Call Stack:** Executes synchronous code and follow  LIFO order.
 - **Macrotask Queue:** Stores callbacks of timer functions (`setTimeout`, `setInterval`) and I/O tasks.
 - **Microtask Queue:** Stores promise callbacks (`.then()`, `async/await`).
 - Microtasks have higher priority and execute before macrotasks.
@@ -70,7 +70,7 @@
 
 ## 8️⃣ What is the Node.js thread pool?
 - The thread pool is a set of worker threads provided by libuv to handle heavy or blocking operations.
-- By default, it has 4 threads, which Node.js uses to execute heavy tasks in parallel without blocking the main event loop.
+- By default, it has 4 threads, which Node.js uses to execute heavy tasks in parallel without blocking the main thread
 - Once an operation completes, its callback is sent back to the event loop for processing.
 
 ## 9️⃣ What are Streams in Node.js and their types?
@@ -84,7 +84,7 @@
 
 ## 🔟 What is a Buffer?
 - A Buffer is a temporary memory area used to store raw binary data in Node.js.
-- Mainly used when working with streams or handling data from files or network.
+- Mainly used when working with streams or processing data from files or network.
 
 ## 1️⃣1️⃣ Difference between Buffer and Stream
 - **Buffer:** Stores entire data in memory; suitable for small, fixed data sizes.
@@ -96,7 +96,8 @@
 - Supports creating, reading, writing, updating, and deleting files.
 - Offers both synchronous and asynchronous methods:
   - Sync methods block execution until completion.
-  - Async methods start the operation and continue; results are handled via callback or promise.
+  - Async methods start the operation and continue doing other task;Once operation is complete Its results are
+  - handled via callback or promise.
 
 ## 1️⃣3️⃣ What is the `process` object in Node.js?
 - A global object providing information and control over the current Node.js process.
