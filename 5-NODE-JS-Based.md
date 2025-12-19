@@ -101,7 +101,11 @@
 
 ## 1️⃣3️⃣ What is the `process` object in Node.js?
 - A global object providing information and control over the current Node.js process.
-- Access environment variables (`process.env`), command-line arguments (`process.argv`), process ID (`process.pid`), and manage process lifecycle (`process.exit()`).
+- Information such as
+  - Access environment variables (`process.env`)
+  -  command-line arguments (`process.argv`)
+  -  process ID (`process.pid`)
+  -  Manage process lifecycle (`process.exit()`).
 
 ## 1️⃣4️⃣ What are Environment Variables?
 - Values used to store configuration data outside application code.
@@ -109,9 +113,9 @@
 - Accessed in Node.js via `process.env`.
 
 ## 1️⃣5️⃣ What is clustering in Node.js?
-- Clustering creates multiple child processes (workers) sharing the same server port.
-- Since Node.js runs on a single thread, clustering allows utilizing all CPU cores.
-- The master process distributes incoming requests among worker processes.
+- Clustering creates multiple worker processes that sharing the same server port.
+- When incoming request come master process distributes among worker processes.
+- Since node js is single thread,it it help to utilize all cpu core
 - Enhances performance, scalability, and fault tolerance.
 
 ## 1️⃣6️⃣ Difference between Cluster and Worker Threads
