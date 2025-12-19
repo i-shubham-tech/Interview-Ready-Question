@@ -75,7 +75,7 @@
 
 ## 9️⃣ What are Streams in Node.js and their types?
 - Streams used handle large data in chunks instead of loading the entire data into memory at Once.
-- Used for reading or writing data continuously, such as files, videos, or network data.
+- Used for reading or writing data continuously, such as files, videos streaming, or network data.
 - **Types of Streams:**
   - **Readable Stream:** Reads data in chunks (`fs.createReadStream()`).
   - **Writable Stream:** Writes data in chunks (`fs.createWriteStream()`).
@@ -83,7 +83,7 @@
   - **Transform Stream:** Modifies data while reading/writing (e.g., compression).
 
 ## 🔟 What is a Buffer?
-- A Buffer is a temporary memory area used to store raw binary data in Node.js.
+- A Buffer is a temporary memory area used to store raw binary data.
 - Mainly used when working with streams or processing data from files or network.
 
 ## 1️⃣1️⃣ Difference between Buffer and Stream
