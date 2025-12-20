@@ -38,7 +38,7 @@
 ## 3️⃣ How does Node.js handle multiple concurrent requests?
 - Node.js handles multiple concurrent requests using a single-threaded, event-driven, non-blocking I/O Architecture.
 - It uses the Event Loop to manage asynchronous operations.
-- Time-consuming operation (like I/O, database calls, file system operations) are handled asynchronously and delegated to the thread pool, allowing Node.js to continue processing other requests without waiting.
+- Time-consuming operation (like I/O, database calls, file system operations) are  delegated to the thread pool, allowing Node.js to continue processing other requests without waiting.
 - As a result, Node.js can handle thousands of concurrent connections efficiently with a single main thread.
   
 ## 4️⃣ What is the Event Loop in Node.js?
