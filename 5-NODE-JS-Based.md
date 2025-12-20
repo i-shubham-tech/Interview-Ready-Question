@@ -26,22 +26,21 @@
 - It is built on Google’s V8 engine and uses an event-driven, non-blocking I/O model.
 
 ## 2️⃣ How does Node.js execute JavaScript code internally?
-- When we run a JavaScript file, Node.js V8 engine converts the JavaScript code into machine code and executes it.
+- Node.js executes JavaScript code using the V8 engine.
+- When we run a JavaScript file, Node.js passed it to the V8 engine which compile JavaScript code into machine code and executes it.
 - Synchronous code is executed in the call stack.
-- Asynchronous code is handle by Node APIs (powered by libuv thread pool).
-- When the async operation is completed, its callback is push to the appropriate task queue.
-- The event loop continuously checks whether the call stack is empty.
+- Asynchronous code is handle by libuv that manage event loop and thread pool.
+- Once the async operation is completed, its callback is push to the appropriate task queue.
+- The event loop continuously checks whether the call stack is empty or not.
 - If the call stack is empty, it picks callbacks from the queues and pushes them to the call stack for execution.
 - It first executes microtasks like promises, then executes macrotasks like timers and I/O callbacks.
 
 ## 3️⃣ How does Node.js handle multiple concurrent requests?
-- Node.js handles multiple requests using a single-threaded, event-driven, non-blocking I/O model.
-- When a request comes, synchronous code executes in the call stack.
-- Time-consuming operations like database calls and I/O are handled asynchronously by Node APIs powered by libuv thread pool.
-- While these run in the background, Node.js continues processing other requests.
-- Once the async operation finishes, its callback is placed in the appropriate queue, then  event loop pick the callback pushes it to the call stack for execution when free.
-- This allows Node.js to efficiently handle many concurrent requests with a single thread.
-
+- Node.js handles multiple concurrent requests using a single-threaded, event-driven, non-blocking I/O Architecture.
+- It uses the Event Loop to manage asynchronous operations.
+- Time-consuming operation (like I/O, database calls, file system operations) are handled asynchronously and delegated to the thread pool, allowing Node.js to continue processing other requests without waiting.
+- As a result, Node.js can handle thousands of concurrent connections efficiently with a single main thread.
+  
 ## 4️⃣ What is the Event Loop in Node.js?
 - The event loop is the core mechanism that allow Node.js to perform non-blocking asynchronous operations without blocking the main thread.
 - It continuously checks whether the call stack is empty.
