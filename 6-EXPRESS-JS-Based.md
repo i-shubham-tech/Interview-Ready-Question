@@ -1,4 +1,4 @@
-```markdown
+
 # Express.js Interview Questions and Answers
 
 ## 1️⃣ What is Express.js and why was it created?
@@ -106,4 +106,3 @@
 - Global error handling is done using error-handling middleware.
 - Create middleware with four parameters: `(err, req, res, next)` and place it at the end of all routes.
 - When an error occurs, it is passed via `next(err)`, and Express forwards it to this middleware.
-```
