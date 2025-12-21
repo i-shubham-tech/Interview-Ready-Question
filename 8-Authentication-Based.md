@@ -21,7 +21,7 @@ Common authentication methods are:
 ---
 
 ## 2. What is JWT?
-JWT (JSON Web Token) is a token-based authentication method where user information is securely sent between client and server in token form.
+JWT (JSON Web Token) is a token-based authentication method that uses to  securely send user information  between client and server in token form.
 
 - A JWT token has three parts: **Header**, **Payload**, and **Signature**
   - **Header** → Contains token type and signing algorithm
