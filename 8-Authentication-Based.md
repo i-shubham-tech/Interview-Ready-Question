@@ -37,11 +37,11 @@ JWT (JSON Web Token) is a token-based authentication method that uses to  secure
 
 ## 3. What is Session-based Authentication?
 - Session-based authentication is a method where the server creates and stores session data on server side and sends a session ID to the client.
-- For each request, the client sends this session ID,
+- which client send with each request
 - and the server verifies it using stored session data.
--  When the user logs out or the session expires, the session data is destroyed.
+-  When the user logs out or the session expires, the session data get destroyed.
 
-It is **stateful** because the server stores session information.
+It is **stateful** as server stores session information.
 
 ---
 
