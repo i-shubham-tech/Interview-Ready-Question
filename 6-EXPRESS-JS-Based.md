@@ -79,8 +79,8 @@
 - It contains all information sent by the client, such as URL parameters, query parameters, request body, headers, and cookies.
 
 **Common properties:**
-- `req.params` — Dynamic values of the URL path (route parameters).
-- `req.query` — Key-value pairs of the URL query string.
+- `req.params` — Dynamic values of the URL path (route parameters) that send using : colon .
+- `req.query` — Key-value pairs of the URL query string that send using &&.
 - `req.body` — Data sent in the request body.
 - `req.headers` — Metadata about the request like content type and authorization.
 
