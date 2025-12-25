@@ -21,7 +21,7 @@ collection - It is a group of docoment inside a database
 
 Docoment - It is the single record in a collection .it contains field 
 
-Field- Field are property of docoment in Key-value pair
+Field- Field are Key-value pair inside docoment 
 
 What is _id
 
