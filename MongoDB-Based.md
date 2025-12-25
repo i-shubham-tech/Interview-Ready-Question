@@ -128,10 +128,18 @@ $regex-->find pattern in string
 
 $option:'i' --> to ignore case sensitive 
 
+group operator 
+
+$sum-->Sum values {$group:{field:{$sum:}}}
+$avg-->Average {$group:{field:{$avg:}}}
+$count-->Count documents {$group:{field:{count:}}}
+$min
+$max
+
 
 What is sort
 
-Sort used to order the docoment in ascending or descending order based on field
+Sort used to order the document in ascending or descending order based on field
 
 db.coll.find().sort({field:1}) -> ascending 
 db.coll.find().sort({field:-1}) -> decending 
@@ -152,8 +160,69 @@ db.coll.find().skip(5) will skip first five
 
 
 
+what is aggregation 
+
+Aggregation used to process and analyze data using operation like filtering, grouping,sorting etc and return a compute result
+
+It work using pipeline.
+
+Pipeline is a sequence of stages where output of one stage become input of next stage 
 
 
+db.collectionname.aggregation([
+{stage1},{stage2},{stage3}
+])
 
+Stages are
 
+$match — Filter documents
+{ $match: { age: { $gt: 18 } } }
 
+$group — Group data
+{
+  $group: {
+    _id: "$role",// grouping by field
+    totalUsers: { $sum: 1 } // aggre op result 
+  }
+}
+
+$project — Select fields
+{
+  $project: {
+    name: 1,
+    age: 1,
+    _id: 0
+  }
+}
+
+$sort — Sort results
+{ $sort: { age: -1 } }
+
+skip — Skip results
+{ $skip: 5 }
+
+$limit — Limit results
+{ $limit: 5 }
+
+$count — Count documents
+{ $count: "totalUsers" }
+
+$addFields — Add or calculate new fields
+{ $addFields: { isAdult: {age:{$gte:18} } } }
+
+$lookup — Join collections (SQL JOIN)
+{
+  $lookup: {
+    from: "orders",// join collection 
+    localField: "_id",// my coll field
+    foreignField: "userId",// join coll field
+    as: "userOrders" // result in array
+  }
+}
+
+$unwind — Break array into multiple documents
+{ $unwind: "$userOrders" }
+
+NOTE "$KEYNAME"--> value eg name=Shubham
+
+then "$name" = shubham
