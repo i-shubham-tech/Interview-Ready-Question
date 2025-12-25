@@ -66,6 +66,92 @@ DeleteMany->Delete many used to delete all conditions matching docomentin the co
 
 db.coll.deleteMany({condition})
 
+What is findOne and find()
+
+FindOne - FindOne fetch first matching docoment , even if multiple matches 
+
+db.coll.findOne({condition},{projection})
+
+Find - Find fetch all docoment if no condition applied or fetch all condition matching docoment 
+
+db.coll.find() or db.find({condition},{proj..})
+
+What is projection
+
+Projection control which field of docoment want to show instead of all
+
+find({condition},{field1:1,field2:0})
+1-mean show 0-mean don't show
+
+
+Condition Operator 
+
+$eq-->Equal to 
+$ne-->Not equal 
+$gt-->Greater than
+$gte-->Greater than or equal
+$lt1-->Less than
+$lte-->Less than or equal
+$in-->Match values in array
+$nin-->Not in array
+
+
+Logical Operators
+
+
+$and-->All conditions true {$and:[{cond1},{2}]}
+$or-->Any condition true {$or:[{cond1},{2}]}
+$not-->Negates condition {age:{$not:{$gt:4}}}
+
+
+Update operator
+
+set-->Update/add field{$set:{field1:neval}}
+$inc-->Increment number{$inc:{fInc1:1,fDec2:-1}
+$unset-->Remove field {$unset:{field1:""}}
+
+Array operator 
+
+$push-->Add to array {$push:{field1:value}}
+$pull-->Remove from array{pull:{field1:val}}
+$addToSet-->Add uniq arr value {addToSet:{f:v}
+
+
+string operator 
+
+
+$regex-->find pattern in string
+
+{field1:{$regex:"xyz"}}} -> contain anywhere 
+{field1:{$regex:"xyz$"}}} -> end with
+{field1:{$regex:"^xyz"}}} -> start with
+
+$option:'i' --> to ignore case sensitive 
+
+
+What is sort
+
+Sort used to order the docoment in ascending or descending order based on field
+
+db.coll.find().sort({field:1}) -> ascending 
+db.coll.find().sort({field:-1}) -> decending 
+
+what is limit
+
+Limit used to restrict the number of docoment  to return from resut
+
+db.coll.find().limit(number)
+examp db.coll.find().limit(5) only show first 5
+
+
+what is skip
+
+skip used to skip specific number of docoment from the results 
+
+db.coll.find().skip(5) will skip first five
+
+
+
 
 
 
