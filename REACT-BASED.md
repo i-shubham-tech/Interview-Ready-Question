@@ -2,8 +2,7 @@ what is reactjs
 
 React js is javascript library that used to build fast and interactive UI especially on single page application 
 It uses component based architecture where ui divided into small, reusable component 
-It internal uses virtual dom to improve performance by update content that actually changes
-
+It internal uses virtual dom to improve performance by update on changes part in real dom
 what is spa
 
 single page application is a web application where only one html page is loaded intially
@@ -12,7 +11,8 @@ It provide fast and smooth experience
 
 what is virtual dom 
 
-virtual dom is a light weight copy of real dom.when application state change then it first update virtual dom instead of real dom.Then compare update virtual dom with previous one and find difference.Then  only changes part are update in real dom which improve performance 
+Virtual dom is a light weight copy of Real DOM.
+when application state change then it first update virtual dom instead of real dom.Then compare update virtual dom with previous one and find difference.Then  only update changes part in real dom which improve performance 
 
 what is jsx
 
@@ -22,7 +22,7 @@ JSX code is not understand by browser so is transpilled into regular javascript 
 
 what is component 
 Component is a self contained, reusable piece of code in React .it represents ui like button,form or section.
-IT received data through props and each component has own state to manage data dynamically 
+IT received data through props and each component has own state to manage data dynamically 6
 
 what is props
 
@@ -31,13 +31,12 @@ props data is read-only that is child component cannot modify it
 
 what is props drilling 
 
-Props drilling is a condition in react where data is pass through multiple level of component even they do required . so that deeply nested child component can receive data
-
+Props drilling is a condition in react where data is pass through multiple level of component even they do required . so that it reach to  deeply nested child component 
 this problem is solve using context api or state management such as redux 
 
 what is context api 
 
-context api is the feature in react that used to share data globally across all components without passing prop manually at each level 
+context api is the feature in react that used to make data avaliable globally so it can access across all component .It prevent from prop drilling
 
 what is Class component and functions component 
 
@@ -65,7 +64,6 @@ what is didComponentMount
 
 Didcomponentmount is the lifecycle method of class . It call only once after component is mounted or render on the ui
 
-
 what is state
 
 State is the object that contain dynamic value of react compent
@@ -75,7 +73,7 @@ it represents information that frequently change such user input,form value,coun
 what Happened when state change 
 
 when state change component get re-render 
-react compare update virtual dom with previous and update changes part in real dom 
+react compare update ui with previous ui using virtual and update changes part in real dom 
 
 
 what happened if we directly update state value 
@@ -96,3 +94,55 @@ what is condition rendering
 
 condition rendering is the technique used to render different ui based on condition 
 
+
+What is React hook
+
+A React Hook is a special function that allows us to use React features like state and lifecycle behavior in functional components.
+Commonly used hooks include useState, useEffect, and useContext.
+
+what is useState
+
+useState is a React Hook used to add and manage state in functional components.
+It store dynamic data of component and update the UI when that data changes.
+
+useState returns an array which contain current state value and a function that update the state.
+
+what is side Effect
+Side effects are tasks that happen outside normal UI rendering,such as fetching data, updating the DOM, setting timers
+
+what is useEffect
+
+UseEffect is a react hook that used to handle side effect in function component
+side effect task include api call,data fetching,timers and dom update
+It run imediately after ui render
+We can control it when to run using dependency array
+If dependency arrray is not define that it run on each render
+If empty dependency arrray is define thaan only run on first render
+If dependency array contain state then run on when ever that state change
+
+Difference between useEffect and lifecycle methods
+lifeCycle method used in clas compoen   useEffect used function compo
+each phase have diff method             useEffect handle all phase
+For mount->CompoundDidMount()           For useEffect with empty dep array
+For update compoundDidUpdate()          For useEffect with dep array contain state
+for unMount compundwillUnMound()        for return () => {};
+
+what is key
+
+Keys in React are special attributes used to uniquely identify elements in a list so React can efficiently update only the changed items during re-rendering.
+
+What is lifting state up?
+
+Lifting state up means moving state from a child component to its closest common parent so that multiple components can share and stay in sync with the same data.
+
+What is controlled vs uncontrolled component?
+
+🔹 Controlled Component
+
+A controlled component is a form element whose value is fully managed by React state.
+React controls the input value through state and updates it using event handlers, making the state the single source of truth.
+
+🔹 Uncontrolled Component
+
+An uncontrolled component is a form element that manages its own state in the DOM.
+React accesses the value only when needed using refs instead of controlling it through state.
