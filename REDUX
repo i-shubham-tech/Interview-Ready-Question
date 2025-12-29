@@ -1,0 +1,5 @@
+## what is redux
+
+Redux is a state management library that provide centralised store where applications state is kept 
+we use it when multiple components to share and update the same data
+
