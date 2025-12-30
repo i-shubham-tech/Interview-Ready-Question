@@ -1,5 +1,69 @@
 ## what is redux
 
-Redux is a state management library that provide centralised store where applications state is kept 
-we use it when multiple components to share and update the same data
+Redux is a state management libraary thar provide a centralized store where shared state of application is stored
+
+## what do we need it
+
+We need it manage shared state in application
+As many component need the same data,passing through prop become complex and hard to manage
+Redux provide centralized store, so each component can directly access and update the state
+
+## what problem it solve
+Redux solves the problem of prop drilling
+when we pass the data through multiple level even they dont need it
+
+What is the flow of Redux?
+
+Redux follows a one-way data flow.
+First, a user action happens, like clicking a button.
+That action is sent as an Action object.
+The action is handled by a Reducer, which decides how the state should change.
+The reducer updates the Store with the new state.
+The updated state is then sent to the UI, and the component re-renders.
+
+
+## what is action
+
+Action is a object that tell reducer the reducer what kind of change should happen.
+It contain type property mandatory and payload is optional
+
+What is a reducer?
+A reducer is a function that decides how the state should change based on an action
+It takes the current state and an action as input and returns a new updated state.
+Reducers do not modify the existing state directly; they always return a new state
+
+What is the Redux store?
+
+The Redux store is a central place where the entire application state is stored.
+It holds the current state, allows actions to be dispatched, and uses reducers to update the state.
+
+What is useSelector()?
+
+useSelector() is a React-Redux hook used to read data from the Redux store.
+
+9️⃣ What is useDispatch()?
+
+useDispatch() is a React-Redux hook used to send actions to the Redux store.
+When an action is dispatched, it is handled by the reducer, and the store gets updated.
+
+What is Redux Toolkit (RTK)?
+
+Redux Toolkit is the official, recommended way to write Redux logic.
+It reduces boilerplate code and makes Redux easier and faster to use.
+RTK provides built-in tools like configureStore, createSlice, and createAsyncThunk.
+
+what is createSlice()
+
+createSlice() is a function provided by Redux Toolkit to create a Redux slice easily.
+It combines initial state, reducers, and action creators in one place.
+
+
+What is createAsyncThunk()?
+createAsyncThunk() is a function in Redux Toolkit used to handle asynchronous operations like API calls.
+
+
+
+
+
+
 
